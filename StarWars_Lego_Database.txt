@@ -1,0 +1,45 @@
+2
+Obi-Wan Kenobi
+A wise and experienced Jedi Master, Obi-Wan Kenobi is a key figure in the Star Wars saga. He is known for his calm demeanor, exceptional lightsaber skills, and strong sense of duty to the Jedi Order. Obi-Wan is a mentor to Anakin Skywalker and later to Luke Skywalker, guiding them both in their journeys to become Jedi Knights.
+3
+Qui-Gon Jinn
+Qui-Gon Jinn is a Jedi Master known for his unconventional methods and strong belief in the will of the Force. He discovers Anakin Skywalker on Tatooine and believes him to be the Chosen One who will bring balance to the Force. Qui-Gon's teachings and philosophies have a lasting impact on both Obi-Wan Kenobi and Anakin Skywalker.
+1
+R2D2
+R2-D2 is an astromech droid known for his resourcefulness and bravery. He is a loyal companion to both Anakin Skywalker and later to Luke Skywalker. R2-D2 plays a crucial role in many key moments of the Star Wars saga, often saving the day with his technical skills and quick thinking.
+2
+Storm Trooper
+Stormtroopers are the elite soldiers of the Galactic Empire. They are highly trained and equipped with advanced weaponry and armor. Stormtroopers are known for their unwavering loyalty to the Emperor and their willingness to carry out his orders without question.
+1
+Princess Leia
+Princess Leia Organa is a key figure in the Rebel Alliance and later the Resistance. She is known for her intelligence, leadership skills, and bravery. Leia is also a skilled diplomat and strategist, playing a crucial role in the fight against the Galactic Empire and later the First Order.
+3
+Jar Jar Binks
+Jar Jar Binks is a Gungan from the planet Naboo. He is known for his clumsy and bumbling nature, often causing more harm than good. Despite his shortcomings, Jar Jar is a loyal friend to the Jedi and plays a small but important role in the fate of the galaxy.
+2
+Anakin Skywalker
+Anakin Skywalker is a Jedi Knight who is prophesied to bring balance to the Force. He is known for his exceptional piloting skills and his strong connection to the Force. Anakin's journey from a young slave on Tatooine to a powerful Jedi Knight, and later to the Sith Lord Darth Vader, is a central focus of the Star Wars saga.
+3
+Darth Vader
+Darth Vader, formerly known as Anakin Skywalker, is a Sith Lord and the apprentice of Emperor Palpatine. He is known for his intimidating presence, mastery of the dark side of the Force, and iconic breathing sound. Darth Vader is a central antagonist in the Star Wars saga, responsible for the fall of the Jedi Order and the rise of the Galactic Empire.
+3
+Chewbacca
+Chewbacca, also known as Chewie, is a Wookiee from the planet Kashyyyk. He is known for his strength, loyalty, and distinctive growl. Chewbacca is a skilled pilot and mechanic, often serving as the co-pilot of the Millennium Falcon alongside Han Solo. He is also a close friend and ally to the Rebel Alliance and later the Resistance.
+2
+C-3PO
+C-3PO is a protocol droid known for his fluency in over six million forms of communication. He is a loyal companion to both Anakin Skywalker and later to Luke Skywalker. C-3PO is known for his polite and formal demeanor, often providing comic relief in tense situations. He is also a skilled translator and diplomat, playing a crucial role in the fate of the galaxy.
+2
+Emperor Palpatine
+Emperor Palpatine, also known as Darth Sidious, is a Sith Lord and the ruler of the Galactic Empire. He is known for his manipulative and cunning nature, as well as his mastery of the dark side of the Force. Palpatine is a central antagonist in the Star Wars saga, orchestrating the fall of the Jedi Order and the rise of the Galactic Empire.
+2
+Mace Windu
+Mace Windu is a Jedi Master known for his exceptional lightsaber skills and his strong sense of justice. He is a key figure in the Jedi Order and a member of the Jedi High Council. Mace Windu plays a crucial role in the Clone Wars and is known for his unwavering commitment to the Jedi Code.
+1
+Yoda
+Yoda is a Jedi Master known for his wisdom, knowledge of the Force, and exceptional lightsaber skills. He is one of the oldest and most powerful Jedi in the Star Wars saga. Yoda is a key figure in the Jedi Order and a mentor to many Jedi Knights, including Luke Skywalker.
+2
+Luke Skywalker
+Luke Skywalker is a Jedi Knight and the son of Anakin Skywalker. He is known for his bravery, resourcefulness, and strong connection to the Force. Luke is a central figure in the Rebel Alliance and later the Resistance, playing a crucial role in the fight against the Galactic Empire and the First Order.
+3
+General Grievous
+General Grievous is a cyborg and the leader of the Separatist Droid Army. He is known for his exceptional lightsaber skills and his ruthless tactics. General Grievous is a central antagonist in the Clone Wars, leading the Separatist forces against the Jedi and the Galactic Republic.
