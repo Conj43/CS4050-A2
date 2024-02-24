@@ -206,7 +206,7 @@ public class BirdsController implements Initializable {
         } catch(Exception ex){
             displayAlert(ex.getMessage());//h
         }
-    }
+    }//test
 
     public void pause() {
         play.setDisable(false);
