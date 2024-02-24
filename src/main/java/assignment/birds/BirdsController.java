@@ -204,7 +204,7 @@ public class BirdsController implements Initializable {
             puase.setDisable(false);
             player.play();
         } catch(Exception ex){
-            displayAlert(ex.getMessage());
+            displayAlert(ex.getMessage());//h
         }
     }
 
