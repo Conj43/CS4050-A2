@@ -24,8 +24,6 @@ public class LSW extends Application {
 
         stage.setScene(scene);
         stage.show();
-
-
     }
 
     /**

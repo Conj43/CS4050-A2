@@ -15,8 +15,7 @@ import javafx.scene.media.MediaPlayer;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Scanner;
@@ -61,9 +60,11 @@ public class LSWController implements Initializable {
     }
 
     public void find() {
+        String filePath = "StarWars_Lego_Database.txt";
         String substring = this.name.getText();
 
-        DataKey key = new DataKey(this.name.getText(), lswSize);
+        String result = searchForSubstring(filePath, substring);
+        DataKey key = new DataKey(result, lswSize);
 
         try {
             lsw = database.find(key);
@@ -72,6 +73,34 @@ public class LSWController implements Initializable {
             displayAlert(ex.getMessage());
         }
     }
+
+    /*This function takes a fileName and substring to search as arguments.
+    * It loads the file into a buffer and reads through the lines and checks for substrings matches on the certain
+    * lines that the lego character names occur on. It will return if the substring provides a match.
+    * */
+    private static String searchForSubstring(String filePath, String subString){
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))){
+            String line;
+            int lineNumber = 1;
+
+            while((line = reader.readLine()) != null){
+                if(isTargetLine(lineNumber) && line.contains(subString)){
+                    return line.trim();
+                }
+                lineNumber++;
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    /*This is a helper function that checks if the line number is wihtin our correct line occurences of the database text file*/
+    private static boolean isTargetLine(int lineNumber){
+        return (lineNumber - 2) % 3 == 0 && lineNumber >= 2 && lineNumber <= 47;
+    }
+
 
     public void delete() {
         LSWRecord previousLSW = null;
