@@ -1,4 +1,4 @@
-package assignment.birds;
+package assignment.group19_cs4050_7050_assignment2;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,15 +11,15 @@ import javafx.stage.Stage;
  *
  * @author Ouda
  */
-public class Birds extends Application {
+public class LSW extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("birds-view.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("lsw-view.fxml"));
 
         Scene scene = new Scene(root);
 
-        stage.getIcons().add(new Image("file:src/main/resources/assignment/birdis/images/UMIcon.png"));
+        stage.getIcons().add(new Image("file:src/main/resources/assignment/group19_cs4050_7050_assignment2/lego_pics/UMIcon.png"));
         stage.setTitle("LSW Portal");
 
         stage.setScene(scene);

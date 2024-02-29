@@ -1,4 +1,4 @@
-package assignment.birds;
+package assignment.group19_cs4050_7050_assignment2;
 
 public class OrderedDictionary implements OrderedDictionaryADT {
 
@@ -14,10 +14,10 @@ public class OrderedDictionary implements OrderedDictionaryADT {
      *
      * @param k
      * @return
-     * @throws assignment/birds/DictionaryException.java
+     * @throws assignment/group19_cs4050_7050_assignment2/DictionaryException.java
      */
     @Override
-    public BirdRecord find(DataKey k) throws DictionaryException {
+    public LSWRecord find(DataKey k) throws DictionaryException {
         Node current = root;
         int comparison;
         if (root.isEmpty()) {         
@@ -51,10 +51,10 @@ public class OrderedDictionary implements OrderedDictionaryADT {
      * a record with the same key as r is already in the dictionary.
      *
      * @param r
-     * @throws birds.DictionaryException
+     * @throws assignment.group19_cs4050_7050_assignment2.DictionaryException
      */
     @Override
-    public void insert(BirdRecord r) throws DictionaryException {
+    public void insert(LSWRecord r) throws DictionaryException {
         if(root == null){
             root = new Node(r);
         }
@@ -66,7 +66,7 @@ public class OrderedDictionary implements OrderedDictionaryADT {
     }
 
 
-    public void recursiveInsert(Node node, BirdRecord r) throws DictionaryException {
+    public void recursiveInsert(Node node, LSWRecord r) throws DictionaryException {
         DataKey key = r.getDataKey();
         DataKey nodeKey = node.getData().getDataKey();
         int comparison = key.compareTo(nodeKey);
@@ -94,7 +94,7 @@ public class OrderedDictionary implements OrderedDictionaryADT {
      * DictionaryException if the record is not in the dictionary.
      *
      * @param k
-     * @throws birds.DictionaryException
+     * @throws assignment.group19_cs4050_7050_assignment2.DictionaryException
      */
     @Override
     public void remove(DataKey k) throws DictionaryException {
@@ -141,10 +141,10 @@ public class OrderedDictionary implements OrderedDictionaryADT {
      *
      * @param k
      * @return
-     * @throws birds.DictionaryException
+     * @throws assignment.group19_cs4050_7050_assignment2.DictionaryException
      */
     @Override
-    public BirdRecord successor(DataKey k) throws DictionaryException{
+    public LSWRecord successor(DataKey k) throws DictionaryException{
         Node current = root;
         Node next = null;
 
@@ -173,10 +173,10 @@ public class OrderedDictionary implements OrderedDictionaryADT {
      *
      * @param k
      * @return
-     * @throws birds.DictionaryException
+     * @throws assignment.group19_cs4050_7050_assignment2.DictionaryException
      */
     @Override
-    public BirdRecord predecessor(DataKey k) throws DictionaryException{
+    public LSWRecord predecessor(DataKey k) throws DictionaryException{
         Node current = root;
         Node before = null;
 
@@ -204,7 +204,7 @@ public class OrderedDictionary implements OrderedDictionaryADT {
      * @return
      */
     @Override
-    public BirdRecord smallest() throws DictionaryException{
+    public LSWRecord smallest() throws DictionaryException{
         if(isEmpty()){
             throw new DictionaryException("Dictionary is empty");
         }
@@ -220,7 +220,7 @@ public class OrderedDictionary implements OrderedDictionaryADT {
 	 * null if the dictionary is empty.
      */
     @Override
-    public BirdRecord largest() throws DictionaryException{
+    public LSWRecord largest() throws DictionaryException{
         if(isEmpty()){
             throw new DictionaryException("Dictionary is empty");
         }

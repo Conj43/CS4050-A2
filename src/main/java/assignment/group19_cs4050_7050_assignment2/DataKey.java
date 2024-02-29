@@ -1,8 +1,8 @@
-package assignment.birds;
+package assignment.group19_cs4050_7050_assignment2;
 
 public class DataKey {
-	private String birdName;
-	private int birdSize;
+	private String lswName;
+	private int lswSize;
 
 	// default constructor
 	public DataKey() {
@@ -10,16 +10,16 @@ public class DataKey {
 	}
         
 	public DataKey(String name, int size) {
-		birdName = name;
-		birdSize = size;
+		lswName = name;
+		lswSize = size;
 	}
 
-	public String getBirdName() {
-		return birdName;
+	public String getlswName() {
+		return lswName;
 	}
 
-	public int getBirdSize() {
-		return birdSize;
+	public int getlswSize() {
+		return lswSize;
 	}
 
 	/**
@@ -27,8 +27,8 @@ public class DataKey {
 	 * than k, and it returns 1 otherwise. 
 	 */
 	public int compareTo(DataKey k) {
-            if (this.getBirdSize() == k.getBirdSize()) {
-                int compare = this.birdName.compareTo(k.getBirdName());
+            if (this.getlswSize() == k.getlswSize()) {
+                int compare = this.lswName.compareTo(k.getlswName());
                 if (compare == 0){
                      return 0;
                 } 
@@ -36,7 +36,7 @@ public class DataKey {
                     return -1;
                 }
             }
-            else if(this.getBirdSize() < k.getBirdSize()){
+            else if(this.getlswSize() < k.getlswSize()){
                     return -1;
             }
             return 1;

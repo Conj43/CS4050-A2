@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package assignment.birds;
+package assignment.group19_cs4050_7050_assignment2;
 
 /**
  * @author Ouda

@@ -1,4 +1,4 @@
-module assignment.birds {
+module assignment.group19_cs4050_7050_assignment2 {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.logging;
@@ -13,6 +13,6 @@ module assignment.birds {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
 */
-    opens assignment.birds to javafx.fxml;
-    exports assignment.birds;
+    opens assignment.group19_cs4050_7050_assignment2 to javafx.fxml;
+    exports assignment.group19_cs4050_7050_assignment2;
 }

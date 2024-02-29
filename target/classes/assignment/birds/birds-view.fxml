@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="971.0" style="-fx-background-image: url(&quot;file:src/main/resources/assignment/birds/images/UMBackground.png&quot;); " xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.birds.BirdsController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="971.0" style="-fx-background-image: url(&quot;file:src/main/resources/assignment/birds/lego_pics/UMBackground.png&quot;); " xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.birds.BirdsController">
     <top>
         <MenuBar fx:id="mainMenu" BorderPane.alignment="CENTER">
             <menus>
@@ -119,13 +119,13 @@
             <bottom>
                 <HBox alignment="CENTER" BorderPane.alignment="CENTER">
                     <children>
-                        <Label prefHeight="21.0" prefWidth="90.0" text="Character Name" />
+                        <Label prefHeight="21.0" prefWidth="76.0" text="Bird Name" />
                         <TextField fx:id="name" prefHeight="29.0" prefWidth="186.0">
                             <HBox.margin>
                                 <Insets left="10.0" />
                             </HBox.margin>
                         </TextField>
-                        <Label text="Character Size">
+                        <Label text="Bird Size">
                             <HBox.margin>
                                 <Insets left="20.0" />
                             </HBox.margin>
