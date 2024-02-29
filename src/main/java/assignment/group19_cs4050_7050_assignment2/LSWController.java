@@ -59,14 +59,15 @@ public class LSWController implements Initializable {
         stage.close();
     }
 
-    public void find() {
+    public void find() throws DictionaryException {
         String filePath = "StarWars_Lego_Database.txt";
-        String substring = this.name.getText();
+        String substring = this.name.getText().toLowerCase();
 
-        String result = searchForSubstring(filePath, substring);
-        DataKey key = new DataKey(result, lswSize);
+
 
         try {
+            String result = searchForSubstring(filePath, substring);
+            DataKey key = new DataKey(result, lswSize);
             lsw = database.find(key);
             showLSW();
         } catch (DictionaryException ex) {
@@ -78,13 +79,14 @@ public class LSWController implements Initializable {
     * It loads the file into a buffer and reads through the lines and checks for substrings matches on the certain
     * lines that the lego character names occur on. It will return if the substring provides a match.
     * */
-    private static String searchForSubstring(String filePath, String subString){
+    private static String searchForSubstring(String filePath, String subString) throws DictionaryException{
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))){
             String line;
             int lineNumber = 1;
 
             while((line = reader.readLine()) != null){
-                if(isTargetLine(lineNumber) && line.contains(subString)){
+                String lowerCase_line = line.toLowerCase();
+                if(isTargetLine(lineNumber) && lowerCase_line.contains(subString)){
                     return line.trim();
                 }
                 lineNumber++;
@@ -92,8 +94,8 @@ public class LSWController implements Initializable {
         }catch (IOException e){
             e.printStackTrace();
         }
+        throw new DictionaryException("No record matching the given key.");
 
-        return null;
     }
 
     /*This is a helper function that checks if the line number is wihtin our correct line occurences of the database text file*/
