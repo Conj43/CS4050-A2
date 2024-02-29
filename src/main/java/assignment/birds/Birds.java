@@ -19,7 +19,7 @@ public class Birds extends Application {
 
         Scene scene = new Scene(root);
 
-        stage.getIcons().add(new Image("file:src/main/resources/assignment/birds/images/UMIcon.png"));
+        stage.getIcons().add(new Image("file:src/main/resources/assignment/birdis/images/UMIcon.png"));
         stage.setTitle("LSW Portal");
 
         stage.setScene(scene);
