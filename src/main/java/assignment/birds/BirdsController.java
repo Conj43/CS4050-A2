@@ -95,7 +95,7 @@ public class BirdsController implements Initializable {
         }
         if (database.isEmpty()) {
             this.BirdPortal.setVisible(false);
-            displayAlert("No more birds in the database to show");
+            displayAlert("No more characters in the database to show");
         } else {
             if (previousBird != null) {
                 bird = previousBird;
