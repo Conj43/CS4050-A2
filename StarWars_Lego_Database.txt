@@ -43,3 +43,6 @@ Luke Skywalker is a Jedi Knight and the son of Anakin Skywalker. He is known for
 3
 General Grievous
 General Grievous is a cyborg and the leader of the Separatist Droid Army. He is known for his exceptional lightsaber skills and his ruthless tactics. General Grievous is a central antagonist in the Clone Wars, leading the Separatist forces against the Jedi and the Galactic Republic.
+2
+Count Dooku
+Count Dooku is a prominent political figure as the Count of his home planet of Serenno, as well as a former Jedi Master, who was trained by Yoda and mentored Obi-Wan Kenobi's master Qui-Gon Jinn. Additionally he fell to the Dark Side and became a sith-lord known as Darth Tyranus
