@@ -196,11 +196,11 @@ public class LSWController implements Initializable {
     this method implements the first button
      */
     public void first() {
-        try{
-            lsw = database.smallest(); //finds the smallest or left most element in the tree
-            showLSW(); //shows that character
-        }catch(DictionaryException p){
-            displayAlert(p.getMessage());
+       try{
+           lsw = database.smallest(); //finds the smallest or left most element in the tree
+           showLSW(); //shows that character
+       }catch(DictionaryException p){
+           displayAlert(p.getMessage());
         }
     }
     /*

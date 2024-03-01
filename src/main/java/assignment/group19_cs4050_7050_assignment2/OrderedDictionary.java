@@ -122,9 +122,10 @@ public class OrderedDictionary implements OrderedDictionaryADT {
                 return node.getLeftChild();
             }
 
-            //update the tree to maintain the correct ordering
-            node.setData(minimum(node.getRightChild()).getData());
-            node.setRightChild(recursiveRemove(node.getRightChild(), node.getData().getDataKey()));
+        //update the tree to maintain the correct ordering
+        node.setData(minimum(node.getRightChild()).getData());
+        node.setRightChild(recursiveRemove(node.getRightChild(), node.getData().getDataKey()));
+
         }
         return node;
     }
