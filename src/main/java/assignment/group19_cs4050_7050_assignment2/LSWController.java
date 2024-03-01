@@ -59,6 +59,7 @@ public class LSWController implements Initializable {
         stage.close();
     }
 
+
     public void find() throws DictionaryException {
         String filePath = "StarWars_Lego_Database.txt";
         String substring = this.name.getText().toLowerCase();
