@@ -23,8 +23,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
- * @author Ouda
+ *Group 19  assignment 2  2-29-2024
+ * @author ouda
  */
 public class LSWController implements Initializable {
 
