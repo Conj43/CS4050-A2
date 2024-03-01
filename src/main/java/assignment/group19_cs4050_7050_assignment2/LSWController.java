@@ -23,8 +23,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
- * @author Ouda
+ *Group 19  assignment 2  2-29-2024
+ * @author ouda
  */
 public class LSWController implements Initializable {
 
@@ -53,44 +53,46 @@ public class LSWController implements Initializable {
     int lswSize = 1;
 
 
+    /*
+    this funtion closes the stage
+     */
     @FXML
     public void exit() {
-        Stage stage = (Stage) mainMenu.getScene().getWindow();
-        stage.close();
+        Stage stage = (Stage) mainMenu.getScene().getWindow(); //gets the current window stage
+        stage.close(); //closes the state
     }
 
-
     public void find() throws DictionaryException {
-        String filePath = "StarWars_Lego_Database.txt";
-        String substring = this.name.getText().toLowerCase();
+        String filePath = "StarWars_Lego_Database.txt"; //the filepath to search in
+        String substring = this.name.getText().toLowerCase(); //get the input and puts it all to lower case
 
 
 
         try {
-            String result = searchForSubstring(filePath, substring);
-            DataKey key = new DataKey(result, lswSize);
-            lsw = database.find(key);
-            showLSW();
+            String result = searchForSubstring(filePath, substring); //looks in the file for the substring
+            DataKey key = new DataKey(result, lswSize); //makes a new datakey for what was returned
+            lsw = database.find(key); //locates the information that corrsponds to that key
+            showLSW(); //outputs the finding to the user
         } catch (DictionaryException ex) {
             displayAlert(ex.getMessage());
         }
     }
 
     /*This function takes a fileName and substring to search as arguments.
-    * It loads the file into a buffer and reads through the lines and checks for substrings matches on the certain
-    * lines that the lego character names occur on. It will return if the substring provides a match.
-    * */
+     * It loads the file into a buffer and reads through the lines and checks for substrings matches on the certain
+     * lines that the lego character names occur on. It will return if the substring provides a match.
+     * */
     private static String searchForSubstring(String filePath, String subString) throws DictionaryException{
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))){
             String line;
             int lineNumber = 1;
 
-            while((line = reader.readLine()) != null){
-                String lowerCase_line = line.toLowerCase();
+            while((line = reader.readLine()) != null){ //while there is still lines in the file to check
+                String lowerCase_line = line.toLowerCase(); //ignores the case of the input
                 if(isTargetLine(lineNumber) && lowerCase_line.contains(subString)){
-                    return line.trim();
+                    return line.trim(); //returns the line in where the match was found
                 }
-                lineNumber++;
+                lineNumber++; //if not found go to the next line
             }
         }catch (IOException e){
             e.printStackTrace();
@@ -99,39 +101,41 @@ public class LSWController implements Initializable {
 
     }
 
-    /*This is a helper function that checks if the line number is wihtin our correct line occurences of the database text file*/
+    /*This is a helper function that checks if the line number is within our correct line occurrences of the database text file*/
     private static boolean isTargetLine(int lineNumber){
-        return (lineNumber - 2) % 3 == 0 && lineNumber >= 2 && lineNumber <= 47;
+        return (lineNumber - 2) % 3 == 0 && lineNumber >= 2 && lineNumber <= 47; //returns true or false dependent upon if the line occurrence falls within our database
     }
 
-
+    /*
+    this implements the delete button and removes the character from the database
+     */
     public void delete() {
         LSWRecord previousLSW = null;
         try {
-            previousLSW = database.predecessor(lsw.getDataKey());
+            previousLSW = database.predecessor(lsw.getDataKey()); //tries to set the previous value to the predecessor
         } catch (DictionaryException ex) {
 
         }
         LSWRecord nextLSW = null;
         try {
-            nextLSW = database.successor(lsw.getDataKey());
+            nextLSW = database.successor(lsw.getDataKey()); //tries to set the next value to the successor
         } catch (DictionaryException ex) {
 
         }
-        DataKey key = lsw.getDataKey();
+        DataKey key = lsw.getDataKey(); //gets the datakey of the value set to be removed
         try {
-            database.remove(key);
+            database.remove(key); //tries to delete the value
         } catch (DictionaryException ex) {
             System.out.println("Error in delete "+ ex);
         }
-        if (database.isEmpty()) {
+        if (database.isEmpty()) { //if the database is empty show that there are no more characters to remove
             this.LSWPortal.setVisible(false);
             displayAlert("No more characters in the database to show");
         } else {
-            if (previousLSW != null) {
+            if (previousLSW != null) { //if deletion occurs and there is a predecessor show that value
                 lsw = previousLSW;
                 showLSW();
-            } else if (nextLSW != null) {
+            } else if (nextLSW != null) { //if deletion occurs and there is no predecessor it will show the successor
                 lsw = nextLSW;
                 showLSW();
             }
@@ -188,39 +192,47 @@ public class LSWController implements Initializable {
                 break;
         }
     }
-
+    /*
+    this method implements the first button
+     */
     public void first() {
-       try{
-           lsw = database.smallest();
-           showLSW();
-       }catch(DictionaryException p){
-           displayAlert(p.getMessage());
+        try{
+            lsw = database.smallest(); //finds the smallest or left most element in the tree
+            showLSW(); //shows that character
+        }catch(DictionaryException p){
+            displayAlert(p.getMessage());
         }
     }
-
+    /*
+    this method implements the last button
+     */
     public void last() {
         try{
-            lsw = database.largest();
-            showLSW();
+            lsw = database.largest(); //finds the largest or right most element in the tree
+            showLSW(); //shows that character
         }catch(DictionaryException p){
             displayAlert(p.getMessage());
         }
     }
-
+    /*
+    this method implements the next button
+     */
     public void next() {
         try{
-            lsw = database.successor(lsw.getDataKey());
-            showLSW();
+            lsw = database.successor(lsw.getDataKey()); //if the character has a successor
+            showLSW(); //show that character
         }catch(DictionaryException p){
             displayAlert(p.getMessage());
         }
 
     }
-
+    /*
+    this method implements the previous button
+     */
     public void previous() {
         try{
-            lsw = database.predecessor(lsw.getDataKey());
-            showLSW();
+            lsw = database.predecessor(lsw.getDataKey());//if the character has a predecessor
+            showLSW(); //show that character
         }catch(DictionaryException p){
             displayAlert(p.getMessage());
         }
