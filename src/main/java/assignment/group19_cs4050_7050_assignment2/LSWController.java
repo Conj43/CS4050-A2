@@ -79,9 +79,9 @@ public class LSWController implements Initializable {
     }
 
     /*This function takes a fileName and substring to search as arguments.
-    * It loads the file into a buffer and reads through the lines and checks for substrings matches on the certain
-    * lines that the lego character names occur on. It will return if the substring provides a match.
-    * */
+     * It loads the file into a buffer and reads through the lines and checks for substrings matches on the certain
+     * lines that the lego character names occur on. It will return if the substring provides a match.
+     * */
     private static String searchForSubstring(String filePath, String subString) throws DictionaryException{
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))){
             String line;

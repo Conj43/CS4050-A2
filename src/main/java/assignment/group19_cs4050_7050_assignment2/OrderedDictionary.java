@@ -125,6 +125,7 @@ public class OrderedDictionary implements OrderedDictionaryADT {
         //update the tree to maintain the correct ordering
         node.setData(minimum(node.getRightChild()).getData());
         node.setRightChild(recursiveRemove(node.getRightChild(), node.getData().getDataKey()));
+
         }
         return node;
     }
@@ -173,7 +174,7 @@ public class OrderedDictionary implements OrderedDictionaryADT {
         return next.getData(); //returns the next nodes data
     }
 
-   
+
     /**
      * Returns the predecessor of k (the record from the ordered dictionary with
      * largest key smaller than k; it returns null if the given key has no
@@ -224,8 +225,8 @@ public class OrderedDictionary implements OrderedDictionaryADT {
     }
 
     /*
-	 * Returns the record with largest key in the ordered dictionary. Returns
-	 * null if the dictionary is empty.
+     * Returns the record with largest key in the ordered dictionary. Returns
+     * null if the dictionary is empty.
      */
     @Override
     public LSWRecord largest() throws DictionaryException{
@@ -238,7 +239,7 @@ public class OrderedDictionary implements OrderedDictionaryADT {
         }
         return current.getData(); //returns the largest item in the dataset
     }
-      
+
     /* Returns true if the dictionary is empty, and true otherwise. */
     @Override
     public boolean isEmpty (){
